@@ -139,7 +139,7 @@ const ManagerRoomItem = ({roomId}) => {
             margin="dense"
             id="name"
             label="Name"
-            type="email"
+            type="text"
             fullWidth
             variant="standard"
             sx={{width: '80%'}}
@@ -151,7 +151,7 @@ const ManagerRoomItem = ({roomId}) => {
             margin="dense"
             id="name"
             label="ID (no space)"
-            type="email"
+            type="text"
             fullWidth
             variant="standard"
             sx={{width: '80%'}}
