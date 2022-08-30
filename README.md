@@ -1,70 +1,28 @@
-# Getting Started with Create React App
+# Start the application
+- cd to the folder and run 'npm start' to start the application.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# How to use
+## Navigation Menu
+A navigation menu can be displayed to switch between the pages, click on the menu icon (top left)
+- Lights: this page allows to manage light devices as per assignment 2.1
+- Manage devices: this page allows to manage the list of rooms and devices as per assignement 2.2
 
-## Available Scripts
+## Lights settings
+- Each room has a list of devices, which can be collapsed or displayed with the arrow button
+- Each device can be toggled ON/OFF with the switch input
+- When OFF, additionnal settings are hidden
+- When ON, the User can change the dimness with the range input, or click on the colored button to open a dialogue and choose the lights' color
+- to pick a color, use the inputs to choose the hue, saturation and lightness. Once the color is picked, click the button to save it
 
-In the project directory, you can run:
+## Manage devices
+- Here rooms and devices can be added or deleted
+- When adding a new room or devices, provide a name and a unique id
+- if the provided id already exists, the new device will overwrite the previous one
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+# Timeline of developement:
+- 2 hours: Setting up the project, creating the UI, controls for ON/OFF toggle and dimness. Snapshot: (2hours.png)
+- 3.5 hours (+1.5h): Task 2.1 done, Color picker implementation. Should take only 0.5h to implement but it was difficult to find a component up-to-date for current React version. Finaly found a neat one: [React-colorful](https://www.npmjs.com/package/react-colorful). Snapshot: (3hours)
+- 5 hours (+1.5h): RETROFIT of the app to use Redux in order to allow sharing the data with the manage page for task 2.2
+- 6 hours (+1h): Implementation of react-router and create the UI for task 2.2. Snapshot(6 hours)
+- 7 hours (+1h): Task 2.2 done, admin panel allows to add and delete devices and rooms, and the header now displays the current page. Snapshot: (7hours)

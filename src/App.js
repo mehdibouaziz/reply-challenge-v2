@@ -1,24 +1,41 @@
-import logo from './logo.svg';
-import './App.css';
+import Header from "./components/Header";
+import NavigationMenu from "./components/NavigationMenu";
+import DeviceList from "./components/DeviceList";
+import DeviceManager from "./pages/manage/DeviceManager";
+
+import { Grid } from "@mui/material";
+import { useState } from "react";
+import { BrowserRouter as Router, Route, Routes} from 'react-router-dom'
+
 
 function App() {
+  const [displayMenu, setDisplayMenu] = useState(false)
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div className="App">
+        <Grid container>
+          <Grid item xs={12}>
+            <Header menuToggle={setDisplayMenu} />
+          </Grid>
+
+          <Grid item>
+            <NavigationMenu display={displayMenu} menuToggle={setDisplayMenu}/>
+          </Grid>
+
+          <Routes>
+            <Route exact path='/' element={
+                <DeviceList />
+            } />
+            <Route path='/manage' element={
+                <DeviceManager />
+            } />
+
+          </Routes>
+
+        </Grid>
+      </div>
+    </Router>
   );
 }
 
